@@ -90,6 +90,8 @@ body {
     flex-grow: 1;
     flex-basis: 10%;
     transition: transform 0.8s ease;
+    cursor: pointer;
+    border: 1px solid rgb(187, 35, 207);
 }
 
 .catagories p:hover {
@@ -97,7 +99,11 @@ body {
     color: wheat;
     cursor: pointer;
     transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(184, 63, 214, 0.79);
+    box-shadow: 0 5px 20px rgba(184, 63, 214, 0.79);
+    transition: 2s;
+    background-color: transparent;
+    color: black;
+    border: 1px solid rgb(187, 35, 207);
 }
 
 .sale-image img {
@@ -108,10 +114,27 @@ body {
 
 .sale-image__offer {
     background-color: rgb(212, 161, 235);
+    border: 1px solid black;
     width: 350px;
     position: relative;
     bottom: 450px;
     padding: 15px;
+    animation-name: zoom;
+    animation-duration: 2s;
+    cursor: pointer;
+    opacity: 0.5;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform:scale(1);
+        opacity: 1;
+    }
+    
 }
 
 .course-card {
